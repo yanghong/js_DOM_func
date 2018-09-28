@@ -7,13 +7,13 @@
 * }
 *
 * */
-function styleHeaderSiblings() {
+function styleHeaderSiblings(tag, theclass) {
     if (!document.getElementsByTagName) return false;
-    const headers = document.getElementsByTagName("h1");
+    const headers = document.getElementsByTagName(tag);
     let elem;
-    for ( var i=0; i<headers.length; i++ ){
+    for ( let i=0; i<headers.length; i++ ){
         elem = getNextElement(headers[i].nextSibling);
-        elem.className = "intro";
+        elem.className = theclass;
     }
 
 }
